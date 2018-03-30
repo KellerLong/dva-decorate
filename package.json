@@ -1,0 +1,24 @@
+{
+  "name": "dva-decorate",
+  "version": "1.0.0",
+  "description": "dva models decorate plug-in",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KellerLong/dev-decorate.git"
+  },
+  "keywords": [
+    "dva",
+    "decorate",
+    "react"
+  ],
+  "author": "KellerLong <kellerlong@163.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/KellerLong/dev-decorate/issues"
+  },
+  "homepage": "https://github.com/KellerLong/dev-decorate#readme"
+}
