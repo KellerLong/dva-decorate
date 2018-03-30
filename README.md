@@ -5,7 +5,11 @@ This library fully depends on [dva](https://github.com/dvajs/dva.git).
 MIT License
 
 # Install
-npm i --save-dev dva-decorate
+ npm i --save-dev dva-decorate
+
+ or
+
+ yarn add -dev dva-decorate
 
 # Usage
 
