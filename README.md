@@ -17,5 +17,58 @@ There are 4 decorators:
 * `@Subscriptions`
 
 ```typescript
- // 后续完善
+ import { State, Model, Reducer, Effect, Subscription } from 'dva-decorate';
+
+ /**
+  * @deprecated namespace is class name, this namespace is Demo
+  */
+ @Model
+ export class Demo {
+   /**
+    * @deprecated create a state
+    * default: state init value
+    * set: add a reducer, reducer name is setTodo
+    */
+   @State({ default: '', set: true })
+   public todo: string;
+
+   /**
+    * @deprecated create a reducer
+    * @param state
+    * @param action
+    * @return {}
+    */
+   @Reducer
+   public reducerDemo(state, action) {
+     /**
+      * reducer content
+      */
+     return { ...state };
+   }
+
+   /**
+    * @deprecated create a effect
+    * @param action
+    * @param {any} put
+    * @param {any} all
+    */
+   @Effect
+   public * effectDemo(action, { put, all }) {
+     yield put('reducerDemo');
+   }
+
+   /**
+    * @deprecated create a subscription
+    * @param {any} history
+    * @return {any}
+    */
+   @Subscription
+   public setup({ history }) {
+     return history.listen(({ pathname, search }) => {
+       if (typeof (window as any).ga !== 'undefined') {
+         (window as any).ga('send', 'pageview', pathname + search);
+       }
+     });
+   }
+ }
 ```
